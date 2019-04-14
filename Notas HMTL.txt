@@ -1,0 +1,156 @@
+Estandar que engloba
+HTML + JAVASCRIPT + CSS
+Lenguaje de etiquetas
+Le da el esqueleto o estructura a las paginas web
+
+¿Que es HTML5?
+Estandar que une html + css + javascript
+No es lenguaje de programacion, sino un lenguaje de etiquetas
+
+html : Estructura
+css : apariencia
+javascript: interactividad y animacion
+
+orden de etiquetas
+
+DOCTYPE html :estandar html
+
+head: van las etiquetas meta
+body: va la informacion visible de la pagina
+
+<!DOCTYPE html>
+<html>
+	<head>	</head>
+	<body> </body>
+</html>
+
+Las etiquetas pueden tener atributos por ejemplo name
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+		<meta name ="Hola a todos soy una pagina web bien chidori jejej"/>
+
+		<title>Nombre de la pagina :D</title>
+		<link rel = "stylesheet" href="mihojadeestilos.css"/>
+
+	</head>
+
+	<body>
+
+		Este texto va dentro de la pagina web y no necesita estar entre comillas, Eooo
+		<header>
+			<h1> Soy un titulo :´D </h1>
+		</header>
+
+		<nav>
+			<li>Inicio</li>
+			<li>soy un elemento</li>
+			<li>Eooo</li>
+		</nav>
+
+	</body>
+
+</html>
+
+Tambien tenemos 2 etiquetas muy importantes:
+
+<title> </title> van dentro del head y es el titulo de la pagina que se ve en la pestaña del navegador
+<link/> hace referencia a la hoja de estilo css
+
+Dentro del body es decir la informacion visible,tenemos etiquetas que nos ayudan a dar la estructura a la pagina
+es decir, que elementos van en la cabecera o que elementos son de la barra latera etc, las partes de la pagina con sus etiquetas son:
+
+cabecera : <header> </header>
+barra de navegacion : <nav> </nav>
+barra lateral: <aside> </aside>		|	contenido principal: <section></section>
+informacion institucuional: <footer></footer>
+
+Para la barra de navegacion, usamos una lista desordenada usando la etiqueta <ul></ul>,dentro van los elemtnos con <li></li>
+
+Las etiquetas <h1>...<h6> indican un titulo con el tamaño de letra del numero
+
+Cuando la barra lateral va a la izquierda el orden es:
+<aside></aside>
+<section></section>
+
+Cuando va a la derecha va
+<section></section>
+<aside></aside>
+
+Cuando queremos hacer una larga cita usamos
+<blockquote></blockquote>
+
+Cuando queremos hacer  un parrafo usamos:
+<p></p>
+
+En general el cuerpo de la pagina estara llena de noticias
+una noticia tiene un header y un footer, ademas de un titulo h1 y un subtitulo h2
+
+Usamos la  etiqueta <article></article> par agrupar los elementos en comun en este caso todo lo de una noticia:
+Estructura de una noticia:
+
+<article>
+	<header>
+		<hgroup>
+			<h1></h1>
+			<h2></h2>
+		</hgroup>	
+	</header>
+
+	<p></p>
+	
+	<footer>
+		<p></p>
+	</footer>
+</article>
+
+La etiqueta <hgroup></hgroup> agrupa las etiquetas h1, h2 si solo hay 1 etiqueta no se necesita agrupar
+
+El section <section></section> tiene noticias,en general
+
+<body>
+	<header></header>
+	<nav></nav>
+	<aside></aside>
+	<section>
+		<article></article>
+	</section>
+	<footer></footer>
+</body>
+
+La etiqueta <figure></figure> sirve para insertar elementos que tienen que ver el contenido pero son independientes, como imagenes,videos,etc
+
+Para insertar una imagen se usa la etiqueta
+<img src="ruta_del_archivo"/>
+
+Para añadir el pie de la imagen usamos
+<figcaption></figcation>, dentro de la etiqueta figure
+
+ETIQUETAS
+
+<mark></mark>
+Se usa para resaltar texto (efecto resaltador amarillo), pero sin darle enfasis a su importancia, se resalta pero no es importante
+
+<em></em>
+Indica enfasis y pone en cursiva, y sustituye <i></i>
+
+<strong></strong>
+Se usa para marcar texto importante, y se coloca en negrita
+
+<small></small>
+Presenta texto legales, letra mas pequeña
+
+<cite></cite>
+citar titulos de libros,canciones,peliculas,o trabajos propios, coloca en cursiva
+
+<address></address>
+Para informacion de contacto, direccion telefono email y va dentro del footer
+
+<time></time>
+Representa fechas y horas
+<time datetime="2014-09-11" pubdate> se usa este formato
+
+Lo importante de las etiquetas no es el aaspecto visual,sino el significado semantico para los navegadores

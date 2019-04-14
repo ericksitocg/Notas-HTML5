@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Elemento CSS3 basico</title>
+
+	<style>
+		#principal{
+			/*Ancho del elemento*/
+			width: 500px;
+			/*Color del elemento*/
+			/*background-color: #00F;*/
+			/*Posicion del contenido respecto al elemento*/
+			text-align: center;
+			/*Separacion del elemento con respecto a la caja principal body*/
+			/*margin: valorArriba-Abajo valorIzquierda-Derecha*/
+			/*margin: valorArriba valorAbajo valorIzquierda valorDerecha*/
+			margin: 15px auto;
+			/*Distancia entre contenido y contenedor al igual que el margin si le das solo un valor lo toma por los 4 lados*/
+			padding: 15px;
+			/*Borde solido y el valor del color*/
+			border: 3px solid #F00;
+			/*Redondear las esquinas de un contenedor*/
+			/*Si de las un valor lo toma por las 4 esquinas*/
+			border-radius: 15px;
+			/*Darle sombra a un contenedor 
+			box-shadow: color desplazmiento_horizontal desplazamiento_vertical nivel_difuminacion;
+			*/
+			box-shadow:#0F0 15px 5px 5px;
+			/*
+			Degradado
+			
+			Mozzila	-moz-
+			Chrome 	-webkit-
+			Opera	-o-
+			forma de radial gradiente circle|ellipse
+			
+							radial-gradient(direcion_degradado,forma,color1,color2)
+			propiedad:-moz-linear-gradient(direccion_degradado,color1,color2);
+			*/
+			background:-moz-linear-gradient(left,#F60,#FF9);
+			/*
+			Contorno al contenedor
+			outline:tamaño forma color;
+			*/
+			outline:5px dotted #6633FF;
+			/*Separacion entre el contenido y el contorno*/
+			outline-offset:10px;
+			/*Modificar el tamaño con respecto al original, valor de 0 en adelante, 1 es el tamaño original, con el (n,-1) se da la vuelta*/
+			transform:scale(1.5);
+			/*Perspectiva*/
+			transform:skew(10deg);
+			/*trascision es para suavisar y darle duracion a un estilo o efecto
+			transition:transform duracion efecto tiempo_iniciar;
+			*/
+			transition:transform 1s ease 0.5s;
+		}
+		#principal:hover{
+			/*El efecto o estilo se aplica solo cuando el mouse esta sobre el elemento*/
+			transform:rotate(5deg);
+		}
+		
+		#titulo{
+			font:bold 30px Verdana, Geneva, sans-serif;
+			
+			/*Darle sombra al texto 
+			text-shadow: color desplazmiento_horizontal desplazamiento_vertical nivel_difuminacion;
+			*/
+			text-shadow: #0F0 5px 3px 5px;
+			/*Tranparancia se usa el valor rgba(nivel_red,nivel_green,nivel,nivel_blue,nivel_alfa)
+			Los niveles van de 0 a 255 y alpha es la transparencia de 0 a 1, donde 0 es totalmente transparente
+			*/
+			color:rgba(0,0,0,0.2);
+		}
+		/*
+		Al seleccionar un font especifico, estamos obligando a la persona que ve la pagina a tener instalado el tipo de letra,
+		de forma que si queremos que la pagina tenga un font (tipo de letra) especifico, subimos el font al proyecto  y se lo
+		brindamos directamente a la persona.
+		
+		@font-face{
+			font-family:'mi_propia_fuente';
+			src:url('nombre_fuente_en_directorio_proyecto');
+		}
+		
+		cambiar la propiedad font:'mi_propia_fuente';
+		*/
+	</style>
+
+</head>
+<body>
+	<header id="principal">
+		<span id="titulo"> Estilos en CSS3</span>
+	</header>
+	
+</body>
+</html>

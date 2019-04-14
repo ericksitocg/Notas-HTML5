@@ -1,0 +1,142 @@
+Notas CSS
+
+Archivo independiente que se encarga de darle la apariencia a los elementos del html
+
+Se linkea el archivo .css al html usando la etiqueta en el head del html:
+
+<link rel = "stylesheet" href="mihojadeestilos.css"/>
+
+Se usan selectores, es decir la etiqueta a la que vamos a modificar y la sintaxis es:
+
+-selector de etiqueta
+-selector de id
+-selector de clase
+
+selector{
+	propiedad:valor;
+}
+
+Ejemplo:
+
+body{
+	background-color:#00F;
+}
+
+Modelo CSS CAJA CONTENEDOR
+
+Etiquetas block crea una caja que ocupa el 100% del ancho de la caja y crea un salto de linea para la siguiente etiqueta
+
+Cada etiqueta crea una caja que se va colocando horizontalmente, una abajo de otra
+
+Las etiquetas dentro de las etiquetas tambien crean cajas dentro de la caja
+
+Toda caja creada va dentro de la caja madre, es decir el body
+
+Existen etiquetas que se repiten en el documeto html, como el footer o el header de forma que las identificamos por un id
+La sintaxis es :
+
+#id_etiqueta_especifico{
+	propiedad:valor;
+}
+
+En el documento html:
+
+<etiqueta id="id_etiqueta_especifico">
+
+El id no es un numero sino un nombre significativo, de forma que la propiedad solo afecta a la etiqueta especifica
+si se usa un selector de etiqueta entonces afecta a todas las etiquetas, por ejemplo a todos los header
+
+En la barra de navegacion, debemos poner los elementos de forma horizontal
+Por defecto las etiquetas son de tipo block es decir opcupando todo el ancho de la pagina, debemos ponerlas inline de forma que se vayan colocando una despues de otra a la derecha.
+
+para eso se establece la propiedad display y se le da el valor inline
+
+display:inline;
+
+En la barra lateral, para que l barra  sea vertical usamos la propiedad y le damos el valor float.Se rompe el flujo de las etiquetas.
+La etiqueta section va a rodear a la etiqueta flotante en este caso aside
+
+float:left;
+
+Para cambiar el alto del elemento,seria cambiar el valor de 
+
+height: n px
+
+La propiedad margin hace referencia a el espacio en blanco o separacion que existe desde el borde del contenedor hacia lo que pueda haber alrededor.
+
+Tener en cuenta que si un elemento es float, es como si estuviera encima de los demas elementos.
+
+La propiedad clear, toma en cuenta los flotantes
+
+clear:both; izquierda y derecha
+
+La propiedad padding es el espacio entre el contenido interno y los margenes de los contenedores, por ejemplo la distancia entre el texto y el contenedor
+
+FORMAS DE LINKAR EL ARCHIVO CSS AL ARCHIVO HTML
+
+DOCUMENTO EXTERNO:
+<link rel = "stylesheet" href="mihojadeestilos.css"/>
+
+ESTILO INDEPENDIENTE EN EL ARCHIVO HTML
+Estilo de cabecera
+
+En la cabezera del documento html, usando la etiqueta <style></style>
+
+Ponemos escribir en el lenguaje css, el estilo y se aplicara solo a ese archivo html
+
+ESTILO IN-LINE
+En la etiqueta, escribimos el stilo usando la propiedad style =""
+y se aplica solo a esta etiqueta y solo a ese documento html
+
+NUEVOS SELECTORES DE CSS3
+
+Selector con nombre, apuntar a elementos con un nombre especifico,pueden existir elementos con el mismo nombre, lo cual no pasa con el id
+
+<head>
+	<style>
+		elemento[name="nombre"]{
+			propiedad:valor;
+		}
+	</style>
+</head>
+
+.........
+
+<p name="nombre"> elemento</p>
+<p name = "nombre"> elemento 2 </p>
+
+Al usar este selector, podemos usar tambien diferentes simbolos para aplicar a nombres especificos
+
+elemento[name^="nombre"]
+Aplica estilo a los elementos cuyo name EMPIEZE CON nombre
+elemento[name$="nombre"]
+Aplica estilo a los elementos cuyo name TERMINAN CON nombre
+elemento[name*="nombre"]
+Aplica estilo a los elementos cuyo name tiene los caracteres nombre sin importar la posicion.
+
+SELECTOR DE SEUDO-CLASES
+elemento:nth-child(n){
+}
+
+Toma en cuenta de los elementos elemento, cual es el n-simo hijo o el n-simo hermano, tomara el n-simo y aplicara el style, esto lo hace por cada padre es decir el body es un padre, pero dentro del body puede existir una lista ordenada <ol></ol> que contiene varios elemento, entonces este tambien seria un padre y le aplicaria al n-simo hijo- hermano tambien, independientemente del n-simo hijo de body
+
+elemento:nth-child(odd){
+}
+Aplica a los elemetos hijos impares
+
+elemento:nth-child(even){
+}
+Aplica a los elementos hijos pares
+
+elemento:first-child{
+}
+Aplica a los elementos que son primer hijo
+elemento:last-child{
+}
+Aplica a los elemetos que son ultimos hijos
+elemento:only-child{
+}
+Aplica a los elementos que solo tienen 1 elemento
+
+
+etiqueta <span></span> nos permite seleccionar texto para aplicar un valor de propiedad
