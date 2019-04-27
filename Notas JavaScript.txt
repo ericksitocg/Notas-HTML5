@@ -1,0 +1,1 @@
+El codigo javascript puede ir al igual que el css, dentro de head con la etiqueta <script></script>, como hoja externa con formato .js y de forma inline en la etiqueta individual.

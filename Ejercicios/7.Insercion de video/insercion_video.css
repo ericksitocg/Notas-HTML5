@@ -1,0 +1,9 @@
+#video{
+  width: 520px;
+  margin: 20px auto;
+  background:#FC3;
+
+  padding: 5px;
+  border: 2px solid #C00;
+  border-radius: 8px;
+}
